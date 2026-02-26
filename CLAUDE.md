@@ -10,6 +10,17 @@ This is a **Claude Code skill-based course development system** for a volunteer 
 The course progresses through ~11 design sessions: from a simple IR-based LFR on a Raspberry Pi Pico W running CircuitPython, through PID control, Kalman filtering, and culminating in Q-Learning or Fuzzy Logic controllers. See `my-vision.md` for the full course vision.
 
 
+## Key Documents
+
+| File | Purpose |
+|:-----|:--------|
+| `my-vision.md` | Instructor's full course vision — primary source of intent |
+| `specification.md` | Detailed project spec generated from vision; primary reference for all doc generation |
+| `my-claude-prompts.md` | Prompts used to generate each major artifact; resume session IDs are here |
+
+These three files form the source-of-truth chain: vision → spec → course documents.
+
+
 ## Commands
 
 ### Lint Markdown
@@ -41,9 +52,11 @@ Skills are auto-invoked instruction sets loaded when Claude detects a matching t
 **Global skills** (`~/.claude/skills/`): `code-doc-writer`, `code-reviewer`, `project-doc-writer`, `skill-generator`, `test-generator`
 
 ### Custom Slash Commands (`.claude/commands/`)
-- `/create-plan` → outputs `plan-[project-name].md`
+- `/create-plan [spec-file]` → reads spec file if provided; outputs `plan-[project-name].md`
 - `/create-syllabus` → outputs `syllabus-[course-name].md`
 - `/create-lesson-plan` → outputs `lesson-plan-[topic].md`
+
+Skills may include a `references/` subdirectory for large content offloaded from `SKILL.md`.
 
 
 ## Critical Rules
