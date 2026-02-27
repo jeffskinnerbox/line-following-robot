@@ -157,8 +157,9 @@ remaining ~18 pins are available for LFR peripherals.
 |:-----|:---------|:------------|:--------:|
 | GP0 | I2C0 SDA | Reserved / future expansion | — |
 | GP1 | I2C0 SCL | Reserved / future expansion | — |
-| GP2–GP5 | Motor control A | Robotics Motor Driver Board (confirm pinout) | DS3 |
-| GP6–GP9 | Motor control B | Robotics Motor Driver Board (confirm pinout) | DS3 |
+| GP2–GP5 | Motor control A | Robotics Motor Driver Board | DS3 |
+| GP6–GP7 | Motor control B | Robotics Motor Driver Board | DS3 |
+| GP8–GP9 | Internal | used by Robotics Motor Driver Board | — |
 | GP10 | Digital in | IR Sensor — Left emitter/detector | DS3 |
 | GP11 | Digital in | IR Sensor — Right emitter/detector | DS3 |
 | GP12–GP19 | Digital in | QTRX-MD-08RC — 8 sensor elements (replaces GP10/GP11 at DS5) | DS5 |
@@ -166,8 +167,7 @@ remaining ~18 pins are available for LFR peripherals.
 | GP21 | Digital in | Speed Sensor — Right wheel | DS7 |
 | GP22 | TBD | Available | — |
 | GP23–GP25 | Internal | Pico W internal use (WiFi, VBUS sense, LED) | — |
-| GP26 (ADC0) | Analog in | Available | — |
-| GP27 (ADC1) | Analog in | Available | — |
+| GP26–GP27 | Motor control B | Robotics Motor Driver Board | DS3 |
 | GP28 (ADC2) | Analog in | Available | — |
 
 > **Note**: WiFi on the Pico W uses the onboard CYW43439 chip via SPI internally;
