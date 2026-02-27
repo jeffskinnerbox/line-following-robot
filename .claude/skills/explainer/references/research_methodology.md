@@ -182,7 +182,7 @@ uv run scripts/get_youtube_transcript.py https://youtu.be/dQw4w9WgXcQ
 
 **Step 2 - Broad search:**
 
-```
+```text
 web_search: "mixture of experts LLMs 2024 explained"
 ```
 
@@ -192,7 +192,7 @@ web_search: "mixture of experts LLMs 2024 explained"
 
 **Step 3 - Deep dive:**
 
-```
+```text
 web_fetch: [Best technical blog or paper URL]
 ```
 

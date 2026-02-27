@@ -190,7 +190,7 @@ Export to the requested format:
 
 The final lesson plan must contain these sections in this order:
 
-```
+```text
 # Lesson Plan: [Class Title]
 
 * Class metadata (number, phase, duration, prerequisites from prior Classes)
@@ -225,7 +225,7 @@ This keeps the document body clean and readable while collecting all URLs in one
 5. Preserve all URLs found in source documents (syllabus, course documents, BOM). Do not drop links.
 6. Every reference definition must follow this format with no space before the colon:
 
-   ```
+   ```text
    [01]:https://example.com/page
    [02]:https://example.com/other-page
    ```

@@ -145,13 +145,13 @@ Include any of these that genuinely help the reader. Omit those that don't add v
 **Block Diagram or Signal Flow**
 A text-based diagram showing major stages and flow from input to output:
 
-```
+```text
 [Input] --> [Stage 1] --> [Stage 2] --> [Stage 3] --> [Output]
 ```
 
 For branching flows:
 
-```
+```text
 Sensor Array ──> ADC ──> Error Calc ──> PID Controller
                                              │
                                              v
@@ -201,7 +201,7 @@ Export to the requested format:
 
 The final document must follow this structure:
 
-```
+```text
 # Theory of Operation: [Subject Name]
 
 **Subject:** [what the document covers]
@@ -248,7 +248,7 @@ This keeps the document body clean and readable while collecting all URLs in one
 5. Preserve all URLs found in source documents (syllabus, course documents, BOM). Do not drop links.
 6. Every reference definition must follow this format with no space before the colon:
 
-   ```
+   ```text
    [01]:https://example.com/page
    [02]:https://example.com/other-page
    ```
@@ -270,7 +270,7 @@ Refer to the [SparkFun Line Follower Array Hookup Guide][03] for wiring details.
 
 ### Section Details
 
-**Metadata Block**
+#### Metadata Block
 - **Subject:** what the document covers
 - **Scope:** narrow / medium / broad
 - **Target Audience:** who this is written for (default: general technical audience)

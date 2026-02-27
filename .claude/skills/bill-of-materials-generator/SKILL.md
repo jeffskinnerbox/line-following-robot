@@ -112,13 +112,13 @@ For every hardware item, include:
 
 After each table, include a cost calculation line showing the math:
 
-```
+```text
 Per-Student Required Cost = item1 + item2 + ... = $XX.XX per student
 ```
 
 At the bottom, provide total cost summaries:
 
-```
+```text
 Total Cost = required + shared + shipping = ~$XX per student
 Total Cost = required + optional + shared + shipping = ~$XX per student (with options)
 ```
@@ -151,7 +151,7 @@ Export to the requested format:
 
 The final BOM must contain these sections in this order:
 
-```
+```text
 # Bill of Materials
 
 Introductory paragraph describing what the BOM covers.
@@ -236,7 +236,7 @@ This keeps the document body clean and readable while collecting all URLs in one
 5. Preserve all URLs found in source documents (syllabus, course documents, lesson plans). Do not drop links.
 6. Every reference definition must follow this format with no space before the colon:
 
-   ```
+   ```text
    [01]:https://example.com/page
    [02]:https://example.com/other-page
    ```

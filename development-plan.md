@@ -80,15 +80,13 @@ This is a **living document**. Update it continuously as the project evolves.
 | Field | Value |
 |:------|:------|
 | Current phase | Phase 1 — Foundation |
-| Phase status | Not started |
+| Phase status | In Progress |
 | Last milestone reached | — (pre-development) |
 | Next git tag to create | `phase1-foundation-complete` |
-| Blocking open questions | Motor Driver Board pinout (see [Q-001][q-001]) |
 
 ### What to work on right now
 
-1. Resolve [Q-001][q-001] — download and read the Motor Driver Board schematic before writing
-    any firmware.
+1. Q-001 is closed and Week 1 tasks are next
 2. Complete [Environment & Repository Bootstrap][s-env] (one-time setup).
 3. Start Phase 1, Week 1 deliverables.
 
@@ -100,6 +98,7 @@ Append-only. Newest entries at the top.
 
 | ID | Date | Decision | Rationale |
 |:---|:-----|:---------|:----------|
+| D-008 | 2026-02-26 | Raspberry Pi Pico W GP8/Pin11 and GP9/PIN12 are consume by the board, no others | as stated on "Kitronik 5329 Product Page" and "Kitronik 5329 Datasheet" |
 | D-007 | 2026-02-26 | MVP cut: Q-Learning hardware deployment deferred if Month 5 runs over | DS11 concept taught via simulator; Q-table not deployed to Pico W until post-course |
 | D-006 | 2026-02-26 | Git workflow: tag main branch at each phase milestone | Simplest possible tracking; no branch overhead; tags are `phase1-foundation-complete`, etc. |
 | D-005 | 2026-02-26 | Simulator parameter panel: pure pygame custom widgets | Fewest dependencies; full layout control; no extra pip packages |
@@ -151,7 +150,7 @@ They run on the Pico W (CircuitPython 9.x) *and* are imported by the desktop sim
 ### 3.4 Repository Bootstrap
 
 ```bash
-mkdir lfr-course && cd lfr-course
+mkdir lfr_course && cd lfr_course
 git init
 python3 -m venv .venv
 source .venv/bin/activate
@@ -163,7 +162,7 @@ before writing any implementation code. This lets `pytest` discover all modules 
 and lets the import graph be validated early.
 
 ```text
-lfr-course/
+lfr_course/
     firmware/
         hal/
             __init__.py
@@ -315,7 +314,7 @@ a line on the physical Pico W via the REPL.
 
 * [ ] Place all hardware orders from the BOM (verify against `specification.md` Section 3).
 * [ ] Confirm Motor Driver Board schematic downloaded — resolve [Q-001][q-001].
-* [ ] Create `lfr-course/` monorepo with full directory skeleton (see [Section 3.4][s-env]).
+* [ ] Create `lfr_course/` monorepo with full directory skeleton (see [Section 3.4][s-env]).
 * [ ] Create virtualenv; install `pygame`, `pytest`, `pytest-cov`, `reportlab`.
 * [ ] Verify `pytest` collects zero tests (no failures) on the empty skeleton.
 * [ ] Initial `git commit`; push to remote.
@@ -744,7 +743,7 @@ Updated continuously. Add new risks at the bottom with a new R-ID.
 | ID | Risk | Likelihood | Impact | Status | Mitigation / Outcome |
 |:---|:-----|:----------:|:------:|:-------|:---------------------|
 | R-001 | Hardware shipping delays | M | H | Active | Order all components Week 1; buy spares for Pico W and QTRX |
-| R-002 | Motor Driver Board pinout undocumented | L | H | Active — blocking [Q-001][q-001] | Download schematic Month 1 before writing `pico_hal.py` |
+| R-002 | Motor Driver Board pinout undocumented | L | H | Resolved 2026-02-26 — GP8/GP9 confirmed; pico_hal.py unblocked | Download schematic Month 1 before writing `pico_hal.py` |
 | R-003 | CircuitPython library unavailable for QTRX-MD-08RC | L | H | Active — validate Week 11 ([Q-003][q-003]) | Pre-validate Month 3 Week 11; fallback: raw GPIO bit-bang |
 | R-004 | Simulator physics diverges from hardware | M | M | Active | Tune physics model against hardware measurements in Phase 2 |
 | R-005 | Q-Learning Q-table fails to converge | M | H | Active | Simplify state space; reward shaping; hard episode limit 500; activate MVP cut if needed |
@@ -764,8 +763,8 @@ Add new questions at the bottom. Mark resolved questions `[x]`.
 
 | ID | Question | Phase needed by | Status |
 |:---|:---------|:----------------|:-------|
-| Q-001 | What are the exact GPIO pin assignments used by the Robotics Motor Driver Board? (Required before `pico_hal.py` can be completed.) | Phase 1, Week 2 | Open |
-| Q-002 | Does CircuitPython 9.x support `from __future__ import annotations`? If not, how should type hints be handled in firmware modules that are also imported by the Python 3.12 simulator? | Phase 1, Week 2 | Open |
+| Q-001 | What are the exact GPIO pin assignments used by the Robotics Motor Driver Board? (Required before `pico_hal.py` can be completed.) | Phase 1, Week 2 | [x] Resolved 2026-02-26 — Raspberry Pi Pico W GP8/Pin11 and GP9/PIN12 are consume by the board, no others |
+| Q-002 | Does CircuitPython 9.x support `from __future__ import annotations`? If not, how should type hints be handled in firmware modules that are also imported by the Python 3.12 simulator? | Phase 1, Week 2 | [x] Resolved 2026-02-26 — Use string literals for forward references |
 | Q-003 | Is there a CircuitPython library for the QTRX-MD-08RC? If not, what is the fallback GPIO bit-bang protocol? | Phase 3, Week 11 | Open |
 | Q-004 | Should the Track Designer's tile picker UI be a modal overlay (popup on tile click) or a persistent palette panel? The spec does not specify layout. | Phase 3, Week 9 | Open |
 

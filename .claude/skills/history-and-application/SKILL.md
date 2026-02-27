@@ -188,7 +188,7 @@ A summary of the most important people in the technology's history:
 **Evolution Diagram**
 A text-based diagram showing major stages of development:
 
-```
+```text
 Manual Control ──> Mechanical Governors ──> Analog Controllers ──> Digital PID ──> Adaptive Control
    (pre-1800)        (1788-1900)            (1920-1960)          (1970-2000)      (2000-present)
 ```
@@ -230,7 +230,7 @@ For other formats:
 
 The final document must follow this structure:
 
-```
+```text
 # History and Application: [Subject Name]
 
 **Subject:** [what the document covers]
@@ -281,7 +281,7 @@ This keeps the document body clean and readable while collecting all URLs in one
 5. Preserve all URLs found in source documents (syllabus, course documents, BOM). Do not drop links.
 6. Every reference definition must follow this format with no space before the colon:
 
-   ```
+   ```text
    [01]:https://example.com/page
    [02]:https://example.com/other-page
    ```
@@ -303,7 +303,7 @@ Refer to the [SparkFun Line Follower Array Hookup Guide][03] for wiring details.
 
 ### Section Details
 
-**Metadata Block**
+#### Metadata Block
 - **Subject:** what the document covers
 - **Target Audience:** who this is written for (default: high school students)
 - **Date:** generation date

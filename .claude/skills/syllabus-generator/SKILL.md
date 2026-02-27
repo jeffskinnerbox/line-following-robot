@@ -171,7 +171,7 @@ The syllabus names the components; the BOM prices and sources them.
 - **Student Computer Requirements** — OS, USB port, internet
 - Include a note directing readers to the BOM for costs, quantities, and sourcing
 
-**5. Course Structure & Format**
+#### 5. Course Structure & Format
 - **Class Flow** — table showing the standard time breakdown for each Class
   (e.g., Review & Q&A, Mini-Lecture, Guided Build, Testing & Documentation, Wrap-Up)
 - **Course Phases** — table mapping phases to Classes, focus areas, and design iterations
@@ -191,7 +191,7 @@ Videos, Websites, YouTube Channels, Books (optional), Tools.
 Every link should be directly relevant to the course content. No filler.
 All links use reference-style format — the actual URLs go in the reference list at the bottom of the file.
 
-**8. Assignment Descriptions**
+#### 8. Assignment Descriptions
 - **Ongoing Assignments** — build journal, code repository
 - **Milestone Assignments** — completion-based (no grades), one per phase or major Class
   Describe format, length, and what to cover. Focus on documentation and reflection.
