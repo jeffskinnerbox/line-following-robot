@@ -27,7 +27,9 @@ These files form the source-of-truth chain: vision → spec → course documents
 
 1. Read `development-plan.md` — check **Current Phase** header and **Document Status** section for immediate context
 2. Read `specification.md` — for hardware, firmware, and tool specs
-3. Act on any **Open Questions** listed in `development-plan.md` before starting new work
+3. Act on any **Open Questions** listed in `development-plan.md` §13 before starting new work
+
+**Currently open**: Q-003 (CircuitPython QTRX library availability — Phase 3, Week 11), Q-004 (Track Designer tile picker layout — Phase 3, Week 9)
 
 
 ## Git Workflow
@@ -72,6 +74,8 @@ pytest tests/unit/                        # Tier 1: unit tests (fast, no hardwar
 pytest tests/sim/                         # Tier 2: simulator tests (headless pygame)
 pytest                                    # all tests
 pytest --cov=firmware --cov=simulator     # with coverage
+pytest tests/unit/test_ir_sensor.py       # single test file
+pytest tests/unit/test_ir_sensor.py::test_function_name  # single test
 ```
 
 For headless simulator tests, set `SDL_VIDEODRIVER=dummy` if not already in `pytest.ini`:
@@ -79,6 +83,17 @@ For headless simulator tests, set `SDL_VIDEODRIVER=dummy` if not already in `pyt
 ```bash
 SDL_VIDEODRIVER=dummy pytest tests/sim/
 ```
+
+### Python Dependencies (pinned)
+
+```text
+pygame      == 2.6.x
+pytest      == 8.x
+pytest-cov  (unpinned)
+reportlab   == 4.x
+```
+
+Install: `pip install pygame pytest pytest-cov reportlab`
 
 
 ## Architecture
@@ -151,6 +166,10 @@ When updating any course document, check the other two for consistency.
 - Use **reference-style links** (e.g., `[text][ref-id]` with `[ref-id]: url` at the bottom), not inline URLs
 - HR dividers use `---------------` (15 dashes)
 - List indentation: 4 spaces
+
+### Hardware Pin Assignments (D-008)
+
+Kitronik 5329 Motor Driver Board consumes GP8 (Pin 11) and GP9 (Pin 12) on the Pico W. No other GPIO pins are consumed by the board. `pico_hal.py` must not reuse these pins.
 
 ### CircuitPython Dual-Runtime Constraint
 
