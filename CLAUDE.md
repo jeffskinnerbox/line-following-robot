@@ -16,9 +16,34 @@ The course progresses through ~11 design sessions: from a simple IR-based LFR on
 |:-----|:--------|
 | `my-vision.md` | Instructor's full course vision — primary source of intent |
 | `specification.md` | Detailed project spec generated from vision; primary reference for all doc generation |
+| `development-plan.md` | Living build tracker — phases, deliverables, decisions, open questions; read this + `specification.md` at the start of every session |
 | `my-claude-prompts.md` | Prompts used to generate each major artifact; resume session IDs are here |
+| `Q-NNN-resolution.md` | Hardware/design research notes resolving a specific open question (e.g. `Q-001-resolution.md`) |
 
-These three files form the source-of-truth chain: vision → spec → course documents.
+These files form the source-of-truth chain: vision → spec → course documents. `development-plan.md` is the session-to-session working context.
+
+
+## New Session Startup
+
+1. Read `development-plan.md` — check **Current Phase** header and **Document Status** section for immediate context
+2. Read `specification.md` — for hardware, firmware, and tool specs
+3. Act on any **Open Questions** listed in `development-plan.md` before starting new work
+
+
+## Git Workflow
+
+Single `main` branch; no feature branches. Tag `main` at each phase milestone:
+
+```bash
+git tag phase1-foundation-complete
+git tag phase2-bangbang-sim-complete
+git tag phase3-designer-reflectance-complete
+git tag phase4-wifi-openloop-pid-complete
+git tag phase5-kalman-qlearn-complete
+git tag phase6-course-ready
+```
+
+Tag pattern: `phase{N}-{name}-complete`. Tags are created only after all phase deliverables and tests are complete (see `development-plan.md`).
 
 
 ## Commands
@@ -50,6 +75,14 @@ Skills are auto-invoked instruction sets loaded when Claude detects a matching t
 | `explainer` | Plain-language breakdowns of complex concepts |
 
 **Global skills** (`~/.claude/skills/`): `code-doc-writer`, `code-reviewer`, `project-doc-writer`, `skill-generator`, `test-generator`
+
+### Status Markers (used in `development-plan.md`)
+
+```text
+[ ]  Pending — not yet started
+[~]  In Progress — actively being worked
+[x]  Done — complete and tested
+```
 
 ### Custom Slash Commands (`.claude/commands/`)
 - `/create-plan [spec-file]` → reads spec file if provided; outputs `plan-[project-name].md`
