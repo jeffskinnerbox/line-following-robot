@@ -31,11 +31,21 @@ These files form the source-of-truth chain: vision → spec → course documents
 
 ### Codebase State
 
-No Python modules exist yet. The repo contains only:
-- Project documentation (`my-vision.md`, `specification.md`, `development-plan.md`, `Q-NNN-resolution.md`)
-- Skill system (`.claude/skills/`, `.claude/commands/`)
+**Phase 1, Weeks 1–2 complete.** Repo skeleton + HAL layer exist:
 
-All firmware, simulator, track designer, and test code is planned but unwritten. First code task is Phase 1, Week 1 repo bootstrap (see `development-plan.md` §3.4).
+| File | Status |
+|:-----|:-------|
+| `firmware/hal/base.py` | Done — `SensorHAL`, `MotorHAL`, `ControllerBase` ABCs |
+| `firmware/hal/pico_hal.py` | Done — IR sensor implemented; motor + reflectance stubs |
+| `firmware/hal/sim_hal.py` | Done — all stubs (zero/False); wired to physics in Phase 2 |
+| `firmware/config.py` | Done — all spec default params |
+| `firmware/main.py` | Done — HAL + config imports; `while True` stub |
+| `firmware/sensors/ir_sensor.py` | Done — `read_ir_pair(sensor)` |
+| `tests/unit/test_hal_base.py` | Done — ABC instantiation raises `TypeError` |
+| `tests/unit/test_ir_sensor.py` | Done — all 4 IR combinations pass |
+| All other `firmware/`, `simulator/`, `track_designer/` modules | Empty stubs only |
+
+Next task: Phase 1 Week 4 (chassis assembly + hardware bring-up). One Week 3 item remains: flash CircuitPython 9.x onto the instructor Pico W and verify REPL.
 
 
 ## Git Workflow

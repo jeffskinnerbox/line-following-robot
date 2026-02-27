@@ -81,14 +81,14 @@ This is a **living document**. Update it continuously as the project evolves.
 |:------|:------|
 | Current phase | Phase 1 — Foundation |
 | Phase status | In Progress |
-| Last milestone reached | — (pre-development) |
+| Last milestone reached | Phase 1 Week 3 code complete (2026-02-27) |
 | Next git tag to create | `phase1-foundation-complete` |
 
 ### What to work on right now
 
-1. Q-001 is closed and Week 1 tasks are next
-2. Complete [Environment & Repository Bootstrap][s-env] (one-time setup).
-3. Start Phase 1, Week 1 deliverables.
+1. Phase 1 Weeks 1–3 code complete; one Week 3 task remaining (hardware).
+2. Flash CircuitPython 9.x onto instructor Pico W; verify REPL — then tick Week 3 done.
+3. Start Phase 1, Week 4 (chassis assembly + hardware integration).
 
 ---------------
 
@@ -332,10 +332,10 @@ a line on the physical Pico W via the REPL.
 
 ### Week 3
 
-* [ ] Write `firmware/config.py` with all default parameters from `specification.md` Section 5.
-* [ ] Write `firmware/main.py` skeleton: imports HAL + config; `while True` loop stub.
-* [ ] Write `firmware/sensors/ir_sensor.py` — `read_ir_pair()` using `SensorHAL`.
-* [ ] Write `tests/unit/test_ir_sensor.py` — all four IR input combinations → correct output.
+* [x] Write `firmware/config.py` with all default parameters from `specification.md` Section 5.
+* [x] Write `firmware/main.py` skeleton: imports HAL + config; `while True` loop stub.
+* [x] Write `firmware/sensors/ir_sensor.py` — `read_ir_pair()` using `SensorHAL`.
+* [x] Write `tests/unit/test_ir_sensor.py` — all four IR input combinations → correct output.
 * [ ] Flash CircuitPython 9.x onto the instructor Pico W; verify REPL over USB.
 
 ### Week 4
