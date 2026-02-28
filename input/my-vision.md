@@ -47,7 +47,7 @@ Below is my vision of how the course will unfold over time:
    We haven't yet taken advantage of the increased capabilities of our design,
    such as handling more sophisticated sensors or more complete motor control (e.g. variable speed and direction).
    To improve the sensor, student will remove the IR Emitter/Phototransistor Pair
-   will replace it with the[QTRX-MD-08RC Reflectance Sensor Array][07] for more effective line detection.
+   will replace it with the [QTRX-MD-08RC Reflectance Sensor Array][07] for more effective line detection.
    The instructor will explain the theory of operation for the QTRX-MD-08RC so the students
    understand the Raspberry pi Pico W logic that will be used.
    The instructor will discuss with the students how to increase over all speed via logic changes on the Raspberry Pi Pico W.

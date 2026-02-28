@@ -220,7 +220,10 @@ lfr_course/
     .gitignore
     CLAUDE.md
     specification.md
-    my-vision.md
+    input/
+        my-vision.md
+        my-claude-prompts.md
+        my-bom.md
     development-plan.md
 ```
 
@@ -732,7 +735,7 @@ Items deferred by the MVP cut are tracked here (not deleted):
 
 * [ ] Deploy `q_table.json` to all 6 Pico Ws
 * [ ] Full DS11 hardware readiness checklist
-* [ ] Optional: Pure Pursuit or Fuzzy Logic controller (mentioned in `my-vision.md`)
+* [ ] Optional: Pure Pursuit or Fuzzy Logic controller (mentioned in `input/my-vision.md`)
 
 ---------------
 
@@ -792,7 +795,7 @@ and the full Q&A session that resolved the key planning decisions.
 
 ### A.1 — Original Prompt (verbatim)
 
-> Read @my-vision.md and @specification.md and create a development plan, to be called
+> Read @input/my-vision.md and @specification.md and create a development plan, to be called
 > "development-plan.md", describing how & when thing are to be created / build.
 > The development plan must reflecting the incrementally build approach outline in the Line
 > Following Robot (LFR) course.

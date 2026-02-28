@@ -263,8 +263,8 @@ lfr-course/
 |   +-- hardware/                  # Pre-class hardware validation checklists
 +-- tracks/                        # Saved track layout files (track.json)
 +-- docs/                          # Course documentation (syllabus, lesson plans)
++-- input/                         # Instructor-authored source documents
 +-- CLAUDE.md
-+-- my-vision.md
 +-- specification.md
 ```
 
@@ -1023,7 +1023,7 @@ and the full Q&A session that resolved the key architectural decisions.
 
 ### A.1 — Original Prompt (verbatim)
 
-> Read @my-vision.md and create a specification document, reflecting the
+> Read @input/my-vision.md and create a specification document, reflecting the
 > incrementally development in the Line Following Robot (LFR) course.
 >
 > I need this this specification document to help prepare me for delivery of

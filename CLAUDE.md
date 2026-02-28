@@ -7,17 +7,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a **Claude Code skill-based course development system** for a volunteer makerspace instructor building documentation for a Line Following Robot (LFR) course at Makersmiths. The audience is mixed-age students (12–18 + adults/parents) with basic coding experience but no hardware background.
 
-The course progresses through ~11 design sessions: from a simple IR-based LFR on a Raspberry Pi Pico W running CircuitPython, through PID control, Kalman filtering, and culminating in Q-Learning or Fuzzy Logic controllers. See `my-vision.md` for the full course vision.
+The course progresses through ~11 design sessions: from a simple IR-based LFR on a Raspberry Pi Pico W running CircuitPython, through PID control, Kalman filtering, and culminating in Q-Learning or Fuzzy Logic controllers. See `input/my-vision.md` for the full course vision.
 
 
 ## Key Documents
 
 | File | Purpose |
 |:-----|:--------|
-| `my-vision.md` | Instructor's full course vision — primary source of intent |
+| `input/my-vision.md` | Instructor's full course vision — primary source of intent |
 | `specification.md` | Detailed project spec generated from vision; primary reference for all doc generation |
 | `development-plan.md` | Living build tracker — phases, deliverables, decisions, open questions; read this + `specification.md` at the start of every session |
-| `my-claude-prompts.md` | Prompts used to generate each major artifact; resume session IDs are here |
+| `input/my-claude-prompts.md` | Prompts used to generate each major artifact; resume session IDs are here |
 | `Q-NNN-resolution.md` | Hardware/design research notes resolving a specific open question (e.g. `Q-001-resolution.md`) |
 
 These files form the source-of-truth chain: vision → spec → course documents. `development-plan.md` is the session-to-session working context.
