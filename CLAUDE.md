@@ -15,12 +15,15 @@ The course progresses through ~11 design sessions: from a simple IR-based LFR on
 | File | Purpose |
 |:-----|:--------|
 | `input/my-vision.md` | Instructor's full course vision — primary source of intent |
+| `input/my-bom.md` | Instructor's draft BOM notes — raw input before BOM generation |
+| `input/my-claude-prompts.md` | Prompts used to generate each major artifact; resume session IDs are here |
 | `specification.md` | Detailed project spec generated from vision; primary reference for all doc generation |
 | `development-plan.md` | Living build tracker — phases, deliverables, decisions, open questions; read this + `specification.md` at the start of every session |
-| `input/my-claude-prompts.md` | Prompts used to generate each major artifact; resume session IDs are here |
 | `Q-NNN-resolution.md` | Hardware/design research notes resolving a specific open question (e.g. `Q-001-resolution.md`) |
 
 These files form the source-of-truth chain: vision → spec → course documents. `development-plan.md` is the session-to-session working context.
+
+**Directory conventions**: `input/` holds instructor-authored source documents (raw inputs). `docs/` holds generated course documents (syllabus, lesson plans — outputs from skills).
 
 
 ## New Session Startup
