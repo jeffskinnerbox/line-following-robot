@@ -1,8 +1,9 @@
 
 # My Claude Code Prompts
 
-## 1st Claude Code Prompt
-Read @my-vision.md and create a specification document, reflecting the incrementally development in the Line Following Robot (LFR) course.
+## Creation of the Specification Document
+### 1st Claude Code Prompt
+Read @input/my-vision.md and create a specification document, reflecting the incrementally development in the Line Following Robot (LFR) course.
 I need this this specification document to help prepare me for delivery of the course in about 6 months.
 I want all the components implied bellow (both hardware and software) to be built and tested in advance of the course.
 
@@ -20,12 +21,9 @@ Use the AskUserQuestions tool for all things that require further clarification.
 
 ---
 
-Resume this session with:
-claude --resume 3867ba3e-b701-4125-bb50-aa242d819955
-
-
-## 2nd Claude Code Prompt
-Read @my-vision.md and @specification.md and create a development plan, to be called "development-plan.md",
+## Creation of the Development Plan Document
+### 2nd Claude Code Prompt
+Read @input/my-vision.md and @specification.md and create a development plan, to be called "development-plan.md",
 describing how & when thing are to be created / build.
 The development plan must reflecting the incrementally build approach outline in the Line Following Robot (LFR) course.
 
@@ -47,5 +45,14 @@ and anywhere else in the text when its a useful reference.
 
 Think Hard about what must be done to create a robust plan.
 Use the AskUserQuestions tool for all things that require further clarification.
+
+---
+
+## Working With Claude Code
+### Claude Code Interaction
+I asked Claude Code to guide me on what needs to be done and it stepped me through the development plan (aka `development-plan.md`)
+
+---
+
 
 

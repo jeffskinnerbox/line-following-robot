@@ -81,7 +81,7 @@ This is a **living document**. Update it continuously as the project evolves.
 |:------|:------|
 | Current phase | Phase 1 — Foundation |
 | Phase status | In Progress |
-| Last milestone reached | Phase 1 Week 3 code complete (2026-02-27) |
+| Last milestone reached | Phase 1 Weeks 1–3 all tasks complete (2026-02-28) |
 | Next git tag to create | `phase1-foundation-complete` |
 
 ### What to work on right now
@@ -315,23 +315,23 @@ a line on the physical Pico W via the REPL.
 
 ### Week 1
 
-* [ ] Place all hardware orders from the BOM (verify against `specification.md` Section 3).
-* [ ] Confirm Motor Driver Board schematic downloaded — resolve [Q-001][q-001].
-* [ ] Create `lfr_course/` monorepo with full directory skeleton (see [Section 3.4][s-env]).
-* [ ] Create virtualenv; install `pygame`, `pytest`, `pytest-cov`, `reportlab`.
-* [ ] Verify `pytest` collects zero tests (no failures) on the empty skeleton.
-* [ ] Initial `git commit`; push to remote.
+* [x] Place all hardware orders from the BOM (verify against `specification.md` Section 3).
+* [x] Confirm Motor Driver Board schematic downloaded — resolve [Q-001][q-001].
+* [x] Create `lfr_course/` monorepo with full directory skeleton (see [Section 3.4][s-env]).
+* [x] Create virtualenv; install `pygame`, `pytest`, `pytest-cov`, `reportlab`.
+* [x] Verify `pytest` collects zero tests (no failures) on the empty skeleton.
+* [x] Initial `git commit`; push to remote.
 
 ### Week 2
 
-* [ ] Write `firmware/hal/base.py` — `SensorHAL`, `MotorHAL`, `ControllerBase` ABCs
+* [x] Write `firmware/hal/base.py` — `SensorHAL`, `MotorHAL`, `ControllerBase` ABCs
     (exact interface: see `specification.md` Section 5).
-* [ ] Write `firmware/hal/pico_hal.py` — GPIO-backed implementations.
+* [x] Write `firmware/hal/pico_hal.py` — GPIO-backed implementations.
     > **Blocker**: Motor Driver Board pin assignments must be confirmed from schematic
     > before this file can be completed. See [Q-001][q-001].
-* [ ] Write `firmware/hal/sim_hal.py` — stub only (returns zeros/False); will be completed
+* [x] Write `firmware/hal/sim_hal.py` — stub only (returns zeros/False); will be completed
     in Phase 2 once `simulator/physics.py` exists.
-* [ ] Unit test `base.py`: verify all three ABCs raise `TypeError` when instantiated directly.
+* [x] Unit test `base.py`: verify all three ABCs raise `TypeError` when instantiated directly.
 
 ### Week 3
 
@@ -784,6 +784,7 @@ Newest entries at top. Add an entry whenever this document changes significantly
 
 | Date | Change |
 |:-----|:-------|
+| 2026-02-28 | Marked all Week 1 and Week 2 tasks [x]; updated last milestone |
 | 2026-02-26 | Document created; all Q&A decisions incorporated; Phases 1–6 drafted |
 
 ---------------
