@@ -34,7 +34,7 @@ These files form the source-of-truth chain: vision → spec → course documents
 
 ### Codebase State
 
-**Phase 1, Weeks 1–2 complete.** Repo skeleton + HAL layer exist:
+**Phase 1, Weeks 1–3 code complete.** Repo skeleton + HAL layer exist:
 
 | File | Status |
 |:-----|:-------|
